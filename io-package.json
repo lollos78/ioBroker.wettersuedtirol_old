@@ -76,15 +76,14 @@
       "native": {}
     },
     {
-      "_id": "info.connection",
+      "_id": "info.id",
       "type": "state",
       "common": {
-        "role": "indicator.connected",
-        "name": "If connected to LaMetric",
-        "type": "boolean",
+        "role": "value",
+        "name": "Wetter Südtirol",
+        "type": "string",
         "read": true,
         "write": false,
-        "def": false
       },
       "native": {}
     }
