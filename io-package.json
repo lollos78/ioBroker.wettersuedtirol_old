@@ -1,104 +1,184 @@
 {
-    "common": {
-        "name": "wettersuedtirol",
-        "version": "0.0.1",
-        "news": {
-            "0.0.1": {
-                "en": "initial adapter",
-                "de": "Initiale Version",
-                "ru": "Первоначальный адаптер",
-                "pt": "Versão inicial",
-                "fr": "Version initiale",
-                "nl": "Eerste release"
-            }
-        },
-		"title": "wettersuedtirol",
-        "titleLang": {
-            "en": "Javascript/Node.js based template",
-            "de": "Javascript / Node.js basierte Vorlagenadapter",
-            "ru": "Адаптер шаблонов на основе Javascript / Node.js",
-            "pt": "Adaptador de modelo baseado em Javascript / Node.js",
-            "nl": "Javascript / Node.js gebaseerde sjabloonadapter",
-            "fr": "Javascript / Node.js basé adaptateur de modèle",
-            "it": "Adattatore modello basato su Javascript / Node.js",
-            "es": "Adaptador de plantilla basado en JavaScript / Node.js"
-        },
-        "desc": {
-            "en": "ioBroker template",
-            "de": "ioBroker Template",
-            "ru": "ioBroker Template как образец",
-            "pt": "Modelo de adaptador para o ioBroker",
-            "fr": "ioBroker adaptateur modèle",
-            "nl": "ioBroker Template",
-            "it": "Adattatore modello ioBroker",
-            "es": "Adaptador de plantilla ioBroker"
-        },
-        "authors": [
-            "Lollo"
-        ],
-        "docs": {
-            "en": "docs/en/admin.md",
-            "ru": "docs/ru/admin.md",
-            "de": "docs/de/admin.md",
-            "es": "docs/es/admin.md",
-            "it": "docs/it/admin.md",
-            "fr": "docs/fr/admin.md",
-            "nl": "docs/nl/admin.md",
-            "pt": "docs/pt/admin.md"
-        },
-        "platform": "Javascript/Node.js",
-        "mode": "daemon",
-        "icon": "template.png",
-        "materialize": true,
-        "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.template/master/admin/template.png",
-        "keywords": ["template", "vis", "GUI", "graphical", "scada"],
-        "readme": "https://github.com/ioBroker/ioBroker.template/blob/master/README.md",
-        "loglevel": "info",
-        "type": "general",
-        "license": "MIT",
-	    "blockly": true,
-        "messagebox": true
+  "common": {
+    "name": "wettersuedtirol",
+    "version": "0.0.1",
+    "news": {
+      "0.0.1": {
+        "en": "initial adapter",
+        "de": "Initiale Version",
+        "ru": "Первоначальный адаптер",
+        "pt": "Versão inicial",
+        "fr": "Version initiale",
+        "nl": "Eerste release"
+      }
     },
+    "title": "Weather South Tyrol",
+    "titleLang": {
+      "en": "Weather South Tyrol",
+      "de": "Südtirol Wetter",
+      "ru": "Weather South Tyrol",
+      "pt": "Weather South Tyrol",
+      "nl": "Weather South Tyrol",
+      "fr": "Weather South Tyrol",
+      "it": "Meteo Alto Adige",
+      "es": "Weather South Tyrol"
+    },
+    "desc": {
+      "en": "Weather South Tyrol",
+      "de": "Südtirol Wetter",
+      "ru": "Weather South Tyrol",
+      "pt": "Weather South Tyrol",
+      "fr": "Weather South Tyrol",
+      "nl": "Weather South Tyrol",
+      "it": "Meteo Alto Adige",
+      "es": "Weather South Tyrol"
+    },
+    "authors": [
+      "Lollo"
+    ],
+    "docs": {
+      "en": "docs/en/admin.md",
+      "ru": "docs/ru/admin.md",
+      "de": "docs/de/admin.md",
+      "es": "docs/es/admin.md",
+      "it": "docs/it/admin.md",
+      "fr": "docs/fr/admin.md",
+      "nl": "docs/nl/admin.md",
+      "pt": "docs/pt/admin.md"
+    },
+    "platform": "Javascript/Node.js",
+    "mode": "daemon",
+    "icon": "WetterSüdtirol.png",
+    "materialize": true,
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/lollos78/iobroker.wettersuedtirol/master/admin/WetterS%C3%BCdtirol.png",
+    "keywords": [ "template", "vis", "GUI", "graphical", "scada" ],
+    "readme": "https://github.com/lollos78/iobroker.wettersuedtirol/blob/master/README.md",
+    "loglevel": "info",
+    "type": "general",
+    "license": "MIT",
+    "blockly": true,
+    "messagebox": true
+  },
     "native": {
         "test1": true,
         "test2": 42,
         "mySelect": "auto"
     },
     "objects": [],
-    "instanceObjects": [
-        {
-            "_id": "info",
-            "type": "channel",
-            "common": {
-                "name": "Information"
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.connection",
-            "type": "state",
-            "common": {
-                "role": "indicator.connected",
-                "name": "If connected",
-                "type": "boolean",
-                "read": true,
-                "write": false,
-                "def": false
-            },
-            "native": {}
-        },
-        {
-            "_id": "wetter.id",
-            "type": "state",
-            "common": {
-                "role": "value",
-                "name": "Id number",
-                "type": "number",
-                "read": true,
-                "write": false
-            },
-            "native": {}
-	}
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "If connected",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.id",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Id number",
+        "type": "number",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.date",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Date",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.hour",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Hour",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today",
+      "type": "channel",
+      "common": {
+        "name": "Wetter Today"
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.date",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Date",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.hour",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Hour",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.title",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Title",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.conditions",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Conditions",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    }
   ]
 }

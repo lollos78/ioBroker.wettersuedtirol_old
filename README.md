@@ -1,7 +1,8 @@
-![Logo](admin/template.png)
+![Logo](admin/WetterSüdtirol.png)
 # ioBroker.wettersuedtirol
 =================
 
+Weather South Tyrol
 
 
 ## License

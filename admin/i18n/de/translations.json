@@ -1,9 +1,9 @@
 {
-  "Auto": "Auto",
-  "Manual": "Manual",
+  "de": "Deutsch",
+  "it": "Italienisch",
+  "rm": "Ladinisch",
+  "en": "Englisch",
   "My select": "Mein Auswahl",
   "on save adapter restarts with new config immediately": "Beim Speichern von Einstellungen der Adapter wird sofort neu gestartet.",
-  "template adapter settings": "Beispiel",
-  "test1": "Test 1",
-  "test2": "Test 2"
+  "template adapter settings": "Südtirol Wetter"
 }

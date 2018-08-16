@@ -1,50 +1,12 @@
-/**
- *
- * template adapter
- *
- *
- *  file io-package.json comments:
- *
- *  {
- *      "common": {
- *          "name":         "template",                  // name has to be set and has to be equal to adapters folder name and main file name excluding extension
- *          "version":      "0.0.0",                    // use "Semantic Versioning"! see http://semver.org/
- *          "title":        "Node.js template Adapter",  // Adapter title shown in User Interfaces
- *          "authors":  [                               // Array of authord
- *              "name <mail@template.com>"
- *          ]
- *          "desc":         "template adapter",          // Adapter description shown in User Interfaces. Can be a language object {de:"...",ru:"..."} or a string
- *          "platform":     "Javascript/Node.js",       // possible values "javascript", "javascript/Node.js" - more coming
- *          "mode":         "daemon",                   // possible values "daemon", "schedule", "subscribe"
- *          "materialize":  true,                       // support of admin3
- *          "schedule":     "0 0 * * *"                 // cron-style schedule. Only needed if mode=schedule
- *          "loglevel":     "info"                      // Adapters Log Level
- *      },
- *      "native": {                                     // the native object is available via adapter.config in your adapters code - use it for configuration
- *          "test1": true,
- *          "test2": 42,
- *          "mySelect": "auto"
- *      }
- *  }
- *
- */
-
 /* jshint -W097 */// jshint strict:false
 /*jslint node: true */
 'use strict';
 
-// you have to require the utils module and call adapter function
-const utils =    require(__dirname + '/lib/utils'); // Get common adapter utils
 
-// you have to call the adapter function and pass a options object
-// name has to be set and has to be equal to adapters folder name and main file name excluding extension
-// adapter will be restarted automatically every time as the configuration changed, e.g system.adapter.template.0
+const utils =    require(__dirname + '/lib/utils'); // Get common adapter utils
 const adapter = new utils.Adapter('wettersuedtirol');
 var request = require('request');
-/*Variable declaration, since ES6 there are let to declare variables. Let has a more clearer definition where
-it is available then var.The variable is available inside a block and it's childs, but not outside.
-You can define the same variable name inside a child without produce a conflict with the variable of the parent block.*/
-//let variable = 1234;
+
 
 // is called when adapter shuts down - callback has to be called under any circumstances!
 adapter.on('unload', function (callback) {
@@ -95,78 +57,72 @@ adapter.on('ready', function () {
 
 function main() {
 
-    // The adapters config (in the instance object everything under the attribute "native") is accessible via
-    // adapter.config:
-    adapter.log.info('config test1: '    + adapter.config.test1);
-    adapter.log.info('config test1: '    + adapter.config.test2);
-    adapter.log.info('config mySelect: ' + adapter.config.mySelect);
-
-
-    /**
-     *
-     *      For every state in the system there has to be also an object of type state
-     *
-     *      Here a simple template for a boolean variable named "testVariable"
-     *
-     *      Because every adapter instance uses its own unique namespace variable names can't collide with other adapters variables
-     *
-     */
-
-/*    adapter.setObject('testVariable', {
-        type: 'state',
-        common: {
-            name: 'testVariable',
-            type: 'boolean',
-            role: 'indicator'
-        },
-        native: {}
-    });
-*/
-    // in this template all states changes inside the adapters namespace are subscribed
-//    adapter.subscribeStates('*');
-
-
-    /**
-     *   setState examples
-     *
-     *   you will notice that each setState will cause the stateChange event to fire (because of above subscribeStates cmd)
-     *
-     */
-
-    // the variable testVariable is set to true as command (ack=false)
-//    adapter.setState('testVariable', true);
-
-    // same thing, but the value is flagged "ack"
-    // ack should be always set to true if the value is received from or acknowledged from the target system
-//    adapter.setState('testVariable', {val: true, ack: true});
-
-    // same thing, but the state is deleted after 30s (getState will return null afterwards)
-//    adapter.setState('testVariable', {val: true, ack: true, expire: 30});
-
-
-
-    // examples for the checkPassword/checkGroup functions
-//    adapter.checkPassword('admin', 'iobroker', function (res) {
-//        console.log('check user admin pw ioboker: ' + res);
-//    });
-
-//    adapter.checkGroup('admin', 'admin', function (res) {
-//        console.log('check group user admin group admin: ' + res);
-//    });
-
-refreshState();
+    refreshState();
 
 }
 
 function refreshState()
 {
-    adapter.log.debug('refreshing wettersuedtirol state');
+    adapter.log.debug('refreshing Wetter Südtirol state');
 
     buildRequest(
         function (content) {
             adapter.setState('info.connection', true, true);
 
-            adapter.setState('wetter.id', {val: content.id, ack: true});
+            adapter.setState('wetter.id', { val: content.id, ack: true });
+            adapter.setState('wetter.date', { val: content.date, ack: true });
+            adapter.setState('wetter.hour', { val: content.hour, ack: true });
+
+            adapter.setState('wetter.today.date', { val: content.today.date, ack: true });
+            adapter.setState('wetter.today.hour,', { val: content.today.hour, ack: true });
+            adapter.setState('wetter.today.title', { val: content.today.title, ack: true });
+            adapter.setState('wetter.today.conditions', { val: content.today.conditions, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.temperatures, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.imageUrl, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.weather, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.bulletinStatus, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.type, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.tMinMin, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.tMinMax, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.tMaxMin, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.tMaxMax, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.reliability, ack: true });
+
+            //adapter.setState('wetter.id', { val: content.today.stationData[0].symbol.code, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[0].symbol.description, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[0].symbol.imageUrl, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[0].max, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[0].min, ack: true });
+
+            //adapter.setState('wetter.id', { val: content.today.stationData[1].symbol.code, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[1].symbol.description, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[1].symbol.imageUrl, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[1].max, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[1].min, ack: true });
+
+            //adapter.setState('wetter.id', { val: content.today.stationData[2].symbol.code, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[2].symbol.description, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[2].symbol.imageUrl, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[2].max, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[2].min, ack: true });
+
+            //adapter.setState('wetter.id', { val: content.today.stationData[3].symbol.code, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[3].symbol.description, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[3].symbol.imageUrl, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[3].max, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[3].min, ack: true });
+
+            //adapter.setState('wetter.id', { val: content.today.stationData[4].symbol.code, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[4].symbol.description, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[4].symbol.imageUrl, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[4].max, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[4].min, ack: true });
+
+            //adapter.setState('wetter.id', { val: content.today.stationData[5].symbol.code, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[5].symbol.description, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[5].symbol.imageUrl, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[5].max, ack: true });
+            //adapter.setState('wetter.id', { val: content.today.stationData[5].min, ack: true });
 
         },
         'GET',
@@ -176,7 +132,7 @@ function refreshState()
 
 function buildRequest(callback, method, data)
 {
-    var url = 'http://daten.buergernetz.bz.it/services/weather/bulletin?format=json&lang=de';
+    var url = 'http://daten.buergernetz.bz.it/services/weather/bulletin?format=json&lang=' + adapter.config.mySelect;
 
     adapter.log.info('sending request to ' + url + ' with data: ' + JSON.stringify(data));
 

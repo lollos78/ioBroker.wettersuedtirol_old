@@ -1,31 +1,31 @@
 {
   "name": "iobroker.wettersuedtirol",
   "version": "0.0.1",
-  "description": "Wetter Südtirol",
+  "description": "Südtirol Wetter",
   "author": {
-    "name": "Lorenz",
-    "email": "lm@t.it"
+    "name": "Lorenz Schuster",
+    "email": "lorenz@notex.it"
   },
   "contributors": [
     {
-      "name": "Lorenz",
-      "email": "lm@t.it"
+      "name": "Lorenz Schuster",
+      "email": "lorenz@notex.it"
     }
   ],
-  "homepage": "https://github.com/ioBroker/ioBroker.template",
+  "homepage": "https://github.com/lollos78/iobroker.wettersuedtirol",
   "license": "MIT",
   "keywords": [
     "ioBroker",
-    "template",
+    "Weather South Tyrol",
     "Smart Home",
     "home automation"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ioBroker/ioBroker.template"
+    "url": "https://github.com/lollos78/iobroker.wettersuedtirol"
   },
   "dependencies": {
-      "request": "^2.72.0"
+    "request": "^2.72.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
