@@ -163,7 +163,7 @@ function refreshState()
 
     buildRequest(
         function (content) {
-
+            adapter.setState('info.connection', true, true);
 
             adapter.setState('wetter.id', {val: content.id, ack: true});
 
