@@ -1,4 +1,4 @@
-![Logo](admin/WetterSüdtirol.png)
+![Logo](admin/WetterSuedtirol.png)
 # ioBroker.wettersuedtirol
 =================
 
