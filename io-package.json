@@ -75,11 +75,11 @@
             "native": {}
         },
         {
-            "_id": "id",
+            "_id": "ido",
             "type": "state",
             "common": {
                 "role": "value",
-                "name": "Id nummer",
+                "name": "Id number",
                 "type": "number",
                 "read": true,
                 "write": false,
