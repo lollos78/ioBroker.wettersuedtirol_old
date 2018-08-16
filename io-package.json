@@ -57,6 +57,7 @@
         "loglevel": "info",
         "type": "general",
         "license": "MIT",
+	    "blockly": true,
         "messagebox": true
     },
     "native": {
@@ -75,7 +76,7 @@
             "native": {}
         },
         {
-            "_id": "ido",
+            "_id": "wetter.id",
             "type": "state",
             "common": {
                 "role": "value",
