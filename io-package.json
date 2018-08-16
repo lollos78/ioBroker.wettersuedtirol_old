@@ -61,8 +61,8 @@
     "messagebox": true
   },
   "native": {
-   // "test1": true,
-   // "test2": 42,
+    "test1": true,
+    "test2": 42,
     "mySelect": "de"
   },
     "objects": [],
