@@ -66,26 +66,37 @@
         "mySelect": "auto"
     },
     "objects": [],
-  "instanceObjects": [
-    {
-      "_id": "info",
-      "type": "channel",
-      "common": {
-        "name": "Information"
-      },
-      "native": {}
-    },
-    {
-      "_id": "info.id",
-      "type": "state",
-      "common": {
-        "role": "value",
-        "name": "Wetter Südtirol",
-        "type": "string",
-        "read": true,
-        "write": false,
-      },
-      "native": {}
-    }
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "If connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        },
+        {
+            "_id": "wetter.id",
+            "type": "state",
+            "common": {
+                "role": "value",
+                "name": "Id number",
+                "type": "number",
+                "read": true,
+                "write": false
+            }
   ]
 }
