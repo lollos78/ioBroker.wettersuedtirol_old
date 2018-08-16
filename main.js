@@ -50,6 +50,7 @@ You can define the same variable name inside a child without produce a conflict 
 adapter.on('unload', function (callback) {
     try {
         adapter.log.info('cleaned everything up...');
+        adapter.setState('info.connection', false, true);
         callback();
     } catch (e) {
         callback();
@@ -183,7 +184,7 @@ function buildRequest(callback, method, data)
         {
             url: url,
             method: method,
-            json: data ? data : true,
+            json: data ? data : true
         },
         function (error, response, content) {
             if (!error && (response.statusCode == 200 || response.statusCode == 201)) {
