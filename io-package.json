@@ -65,26 +65,6 @@
         "test2": 42,
         "mySelect": "auto"
     },
-    "objects": [],
-    "instanceObjects": [
-        {
-            "_id": "wetter",
-            "type": "channel",
-            "common": {
-                "name": "Information"
-            },
-            "native": {}
-        },
-        {
-            "_id": "wetter.id",
-            "type": "state",
-            "common": {
-                "role": "value",
-                "name": "Id number",
-                "type": "number",
-                "read": true,
-                "write": false,
-            },
-            "native": {}
-        }]
+    "objects": []
+ 
       }
