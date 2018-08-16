@@ -30,7 +30,7 @@
                 "nl": "Eerste release"
             }
         },
-		"title": "Javascript/Node.js based template",
+		"title": "wettersuedtirol",
         "titleLang": {
             "en": "Javascript/Node.js based template",
             "de": "Javascript / Node.js basierte Vorlagenadapter",
@@ -86,7 +86,7 @@
     "objects": [],
     "instanceObjects": [
         {
-            "_id": "Wetter",
+            "_id": "wetter",
             "type": "channel",
             "common": {
                 "name": "Information"
