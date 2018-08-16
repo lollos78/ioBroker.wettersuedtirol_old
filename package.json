@@ -24,7 +24,9 @@
     "type": "git",
     "url": "https://github.com/ioBroker/ioBroker.template"
   },
-  "dependencies": {},
+  "dependencies": {
+      "request": "^2.72.0"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "mocha": "^4.1.0",
