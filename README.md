@@ -1,0 +1,2 @@
+# iobroker.wettersuedtirol
+Wetter Südtirol
