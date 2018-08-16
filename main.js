@@ -165,7 +165,7 @@ function refreshState()
         function (content) {
 
 
-            adapter.setState('wetter.id', {val: content.id, ack: true});
+            adapter.setState('info.id', {val: content.id, ack: true});
 
         },
         'GET',
