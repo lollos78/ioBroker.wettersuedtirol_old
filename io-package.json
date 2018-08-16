@@ -60,11 +60,11 @@
     "blockly": true,
     "messagebox": true
   },
-    "native": {
-        "test1": true,
-        "test2": 42,
-        "mySelect": "auto"
-    },
+  "native": {
+   // "test1": true,
+   // "test2": 42,
+    "mySelect": "de"
+  },
     "objects": [],
   "instanceObjects": [
     {
