@@ -52,10 +52,10 @@
     "materialize": true,
     "enabled": true,
     "extIcon": "https://raw.githubusercontent.com/lollos78/iobroker.wettersuedtirol/master/admin/WetterSuedtirol.png",
-    "keywords": [ "template", "vis", "GUI", "graphical", "scada" ],
+    "keywords": [ "Wetter", "Südtirol", "Meteo", "Alto Adige", "Weather", "South Tyrol" ],
     "readme": "https://github.com/lollos78/iobroker.wettersuedtirol/blob/master/README.md",
     "loglevel": "info",
-    "type": "general",
+    "type": "weather",
     "license": "MIT",
     "blockly": true,
     "messagebox": true
