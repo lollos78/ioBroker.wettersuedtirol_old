@@ -2,13 +2,19 @@
 # ioBroker.wettersuedtirol
 =================
 
-Weather South Tyrol
+Südtirol Wetter - Meteo Alto Adig - Weather South Tyrol
 
+##Weather datasource http://wetter.provinz.bz.it/suedtirolwetter.asp
+
+
+## Changelog
+### 0.0.1 (2018-08-16)
+*  intial commit
 
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2018 @@Author@@ <@@email@@>
+Copyright (c) 2018 Lorenz Schuster lorenz@notex.it
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
