@@ -57,7 +57,8 @@
     "loglevel": "info",
     "type": "weather",
     "license": "MIT",
-    "blockly": true,
+    "allowInit": true,
+    "blockly": false,
     "messagebox": true
   },
   "native": {
