@@ -128,7 +128,7 @@
       "_id": "wetter.today",
       "type": "channel",
       "common": {
-        "name": "Wetter Today"
+        "name": "Weather Today"
       },
       "native": {}
     },
@@ -136,9 +136,9 @@
       "_id": "wetter.today.date",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "date",
         "name": "Date",
-        "type": "string",
+        "type": "number",
         "read": true,
         "write": false
       },
@@ -175,6 +175,553 @@
         "role": "value",
         "name": "Conditions",
         "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.temperatures",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Temperatures today",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.imageUrl",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Image url",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.weather",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Weather info",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.bulletinStatus",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Bulletin Status",
+        "type": "number",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.type",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Type",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.tMinMin",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Temperatures min min",
+        "type": "number",
+        "unit": "°C",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.tMinMax",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Temperatures min max",
+        "type": "number",
+        "unit": "°C",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.tMaxMin",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Temperatures max min",
+        "type": "number",
+        "unit": "°C",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.tMaxMax",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Temperatures max max",
+        "type": "number",
+        "unit": "°C",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.reliability",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Reliability",
+        "min": 0,
+        "max": 100,
+        "type": "number",
+        "unit": "%",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.schlanders",
+      "type": "channel",
+      "common": {
+        "name": "Temperatures Today Schlanders"
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.schlanders.symbol.code",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Symbol code",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.schlanders.symbol.description",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Description",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.schlanders.symbol.imageUrl",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Image url",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.schlanders.symbol.max",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Max Temperatures",
+        "type": "number",
+        "unit": "°C",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.schlanders.symbol.min",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Min Temperatures",
+        "type": "number",
+        "unit": "°C",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.meran",
+      "type": "channel",
+      "common": {
+        "name": "Temperatures Today Meran"
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.meran.symbol.code",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Symbol code",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.meran.symbol.description",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Description",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.meran.symbol.imageUrl",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Image url",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.meran.symbol.max",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Max Temperatures",
+        "type": "number",
+        "unit": "°C",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.meran.symbol.min",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Min Temperatures",
+        "type": "number",
+        "unit": "°C",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.bozen",
+      "type": "channel",
+      "common": {
+        "name": "Temperatures Today Bozen"
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.bozen.symbol.code",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Symbol code",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.bozen.symbol.description",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Description",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.bozen.symbol.imageUrl",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Image url",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.bozen.symbol.max",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Max Temperatures",
+        "type": "number",
+        "unit": "°C",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.bozen.symbol.min",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Min Temperatures",
+        "type": "number",
+        "unit": "°C",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.sterzing",
+      "type": "channel",
+      "common": {
+        "name": "Temperatures Today Sterzing"
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.sterzing.symbol.code",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Symbol code",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.sterzing.symbol.description",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Description",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.sterzing.symbol.imageUrl",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Image url",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.sterzing.symbol.max",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Max Temperatures",
+        "type": "number",
+        "unit": "°C",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.sterzing.symbol.min",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Min Temperatures",
+        "type": "number",
+        "unit": "°C",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.brixen",
+      "type": "channel",
+      "common": {
+        "name": "Temperatures Today Brixen"
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.brixen.symbol.code",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Symbol code",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.brixen.symbol.description",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Description",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.brixen.symbol.imageUrl",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Image url",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.brixen.symbol.max",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Max Temperatures",
+        "type": "number",
+        "unit": "°C",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.brixen.symbol.min",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Min Temperatures",
+        "type": "number",
+        "unit": "°C",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.bruneck",
+      "type": "channel",
+      "common": {
+        "name": "Temperatures Today Bruneck"
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.bruneck.symbol.code",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Symbol code",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.bruneck.symbol.description",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Description",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.bruneck.symbol.imageUrl",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Image url",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.bruneck.symbol.max",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Max Temperatures",
+        "type": "number",
+        "unit": "°C",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.today.bruneck.symbol.min",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Min Temperatures",
+        "type": "number",
+        "unit": "°C",
         "read": true,
         "write": false
       },
