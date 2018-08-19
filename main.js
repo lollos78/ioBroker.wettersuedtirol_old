@@ -73,7 +73,7 @@ function refreshState()
             adapter.setState('wetter.date', { val: content.date, ack: true });
             adapter.setState('wetter.hour', { val: content.hour, ack: true }); 
             adapter.setState('wetter.evolution', { val: content.evolution, ack: true });
-            adapter.setState('wetter.evolutionTitle', { val: content.hour, ack: evolutionTitle }); 
+            adapter.setState('wetter.evolutionTitle', { val: content.evolutionTitle, ack: true });
 
             adapter.setState('wetter.today.date', { val: content.today.date, ack: true });
             adapter.setState('wetter.today.hour,', { val: content.today.hour, ack: true });
