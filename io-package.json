@@ -58,7 +58,6 @@
     "type": "weather",
     "license": "MIT",
     "allowInit": true,
-    "blockly": false,
     "messagebox": true
   },
   "native": {
@@ -105,9 +104,9 @@
       "_id": "wetter.date",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "date",
         "name": "Date",
-        "type": "string",
+        "type": "number",
         "read": true,
         "write": false
       },
@@ -119,6 +118,30 @@
       "common": {
         "role": "value",
         "name": "Hour",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.evolution",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Evolution",
+        "type": "string",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "wetter.evolutionTitle",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Evolution Title",
         "type": "string",
         "read": true,
         "write": false
@@ -317,7 +340,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.schlanders.symbol.code",
+      "_id": "wetter.today.schlanders.code",
       "type": "state",
       "common": {
         "role": "value",
@@ -329,7 +352,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.schlanders.symbol.description",
+      "_id": "wetter.today.schlanders.description",
       "type": "state",
       "common": {
         "role": "value",
@@ -341,7 +364,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.schlanders.symbol.imageUrl",
+      "_id": "wetter.today.schlanders.imageUrl",
       "type": "state",
       "common": {
         "role": "value",
@@ -353,7 +376,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.schlanders.symbol.max",
+      "_id": "wetter.today.schlanders.max",
       "type": "state",
       "common": {
         "role": "value",
@@ -366,7 +389,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.schlanders.symbol.min",
+      "_id": "wetter.today.schlanders.min",
       "type": "state",
       "common": {
         "role": "value",
@@ -387,7 +410,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.meran.symbol.code",
+      "_id": "wetter.today.meran.code",
       "type": "state",
       "common": {
         "role": "value",
@@ -399,7 +422,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.meran.symbol.description",
+      "_id": "wetter.today.meran.description",
       "type": "state",
       "common": {
         "role": "value",
@@ -411,7 +434,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.meran.symbol.imageUrl",
+      "_id": "wetter.today.meran.imageUrl",
       "type": "state",
       "common": {
         "role": "value",
@@ -423,7 +446,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.meran.symbol.max",
+      "_id": "wetter.today.meran.max",
       "type": "state",
       "common": {
         "role": "value",
@@ -436,7 +459,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.meran.symbol.min",
+      "_id": "wetter.today.meran.min",
       "type": "state",
       "common": {
         "role": "value",
@@ -457,7 +480,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.bozen.symbol.code",
+      "_id": "wetter.today.bozen.code",
       "type": "state",
       "common": {
         "role": "value",
@@ -469,7 +492,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.bozen.symbol.description",
+      "_id": "wetter.today.bozen.description",
       "type": "state",
       "common": {
         "role": "value",
@@ -481,7 +504,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.bozen.symbol.imageUrl",
+      "_id": "wetter.today.bozen.imageUrl",
       "type": "state",
       "common": {
         "role": "value",
@@ -493,7 +516,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.bozen.symbol.max",
+      "_id": "wetter.today.bozen.max",
       "type": "state",
       "common": {
         "role": "value",
@@ -506,7 +529,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.bozen.symbol.min",
+      "_id": "wetter.today.bozen.min",
       "type": "state",
       "common": {
         "role": "value",
@@ -527,7 +550,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.sterzing.symbol.code",
+      "_id": "wetter.today.sterzing.code",
       "type": "state",
       "common": {
         "role": "value",
@@ -539,7 +562,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.sterzing.symbol.description",
+      "_id": "wetter.today.sterzing.description",
       "type": "state",
       "common": {
         "role": "value",
@@ -551,7 +574,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.sterzing.symbol.imageUrl",
+      "_id": "wetter.today.sterzing.imageUrl",
       "type": "state",
       "common": {
         "role": "value",
@@ -563,7 +586,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.sterzing.symbol.max",
+      "_id": "wetter.today.sterzing.max",
       "type": "state",
       "common": {
         "role": "value",
@@ -576,7 +599,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.sterzing.symbol.min",
+      "_id": "wetter.today.sterzing.min",
       "type": "state",
       "common": {
         "role": "value",
@@ -597,7 +620,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.brixen.symbol.code",
+      "_id": "wetter.today.brixen.code",
       "type": "state",
       "common": {
         "role": "value",
@@ -609,7 +632,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.brixen.symbol.description",
+      "_id": "wetter.today.brixen.description",
       "type": "state",
       "common": {
         "role": "value",
@@ -621,7 +644,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.brixen.symbol.imageUrl",
+      "_id": "wetter.today.brixen.imageUrl",
       "type": "state",
       "common": {
         "role": "value",
@@ -633,7 +656,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.brixen.symbol.max",
+      "_id": "wetter.today.brixen.max",
       "type": "state",
       "common": {
         "role": "value",
@@ -646,7 +669,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.brixen.symbol.min",
+      "_id": "wetter.today.brixen.min",
       "type": "state",
       "common": {
         "role": "value",
@@ -667,7 +690,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.bruneck.symbol.code",
+      "_id": "wetter.today.bruneck.code",
       "type": "state",
       "common": {
         "role": "value",
@@ -679,7 +702,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.bruneck.symbol.description",
+      "_id": "wetter.today.bruneck.description",
       "type": "state",
       "common": {
         "role": "value",
@@ -691,7 +714,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.bruneck.symbol.imageUrl",
+      "_id": "wetter.today.bruneck.imageUrl",
       "type": "state",
       "common": {
         "role": "value",
@@ -703,7 +726,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.bruneck.symbol.max",
+      "_id": "wetter.today.bruneck.max",
       "type": "state",
       "common": {
         "role": "value",
@@ -716,7 +739,7 @@
       "native": {}
     },
     {
-      "_id": "wetter.today.bruneck.symbol.min",
+      "_id": "wetter.today.bruneck.min",
       "type": "state",
       "common": {
         "role": "value",
