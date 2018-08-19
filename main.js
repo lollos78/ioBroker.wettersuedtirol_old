@@ -76,7 +76,7 @@ function refreshState()
             adapter.setState('wetter.evolutionTitle', { val: content.evolutionTitle, ack: true });
 
             adapter.setState('wetter.today.date', { val: content.today.date, ack: true });
-            adapter.setState('wetter.today.hour,', { val: content.today.hour, ack: true });
+            adapter.setState('wetter.today.hour', { val: content.today.hour, ack: true });
             adapter.setState('wetter.today.title', { val: content.today.title, ack: true });
             adapter.setState('wetter.today.conditions', { val: content.today.conditions, ack: true });
             adapter.setState('wetter.today.temperatures', { val: content.today.temperatures, ack: true });
