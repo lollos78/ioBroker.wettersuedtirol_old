@@ -125,7 +125,28 @@ function refreshState()
             adapter.setState('wetter.today.bruneck.imageUrl', { val: content.today.stationData[5].symbol.imageUrl, ack: true });
             adapter.setState('wetter.today.bruneck.max', { val: content.today.stationData[5].max, ack: true });
             adapter.setState('wetter.today.bruneck.min', { val: content.today.stationData[5].min, ack: true });
+            if (content.tomorrow != null) {
+                adapter.setObject('wetter.today', {
+                    type: 'channel',
+                        common: {
+                        name: 'Weather Today'
+                    },
+                    native: { }
+                });
 
+                adapter.setObject('wetter.tomorrow.conditions', {
+                    type: 'state',
+                    common: {
+                            role: 'value',
+                            name: 'Conditions',
+                            type: 'string',
+                            read: true,
+                            write: false
+                    },
+                    native: {}
+                });
+                adapter.setState('wetter.tomorrow.conditions', { val: content.tomorrow.conditions, ack: true });
+            }
         },
         'GET',
         null
