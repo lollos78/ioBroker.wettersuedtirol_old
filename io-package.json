@@ -118,7 +118,7 @@
       "_id": "wetter.hour",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "text",
         "name": "Hour",
         "type": "string",
         "read": true,
@@ -130,7 +130,7 @@
       "_id": "wetter.evolution",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.state",
         "name": "Evolution",
         "type": "string",
         "read": true,
@@ -142,7 +142,7 @@
       "_id": "wetter.evolutionTitle",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.title ",
         "name": "Evolution Title",
         "type": "string",
         "read": true,
@@ -174,7 +174,7 @@
       "_id": "wetter.today.hour",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "text",
         "name": "Hour",
         "type": "string",
         "read": true,
@@ -186,7 +186,7 @@
       "_id": "wetter.today.title",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.titel.forecast.0",
         "name": "Title",
         "type": "string",
         "read": true,
@@ -198,7 +198,7 @@
       "_id": "wetter.today.conditions",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "text",
         "name": "Conditions",
         "type": "string",
         "read": true,
@@ -210,7 +210,7 @@
       "_id": "wetter.today.temperatures",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "text",
         "name": "Temperatures today",
         "type": "string",
         "read": true,
@@ -222,7 +222,7 @@
       "_id": "wetter.today.imageUrl",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.icon",
         "name": "Image url",
         "type": "string",
         "read": true,
@@ -234,7 +234,7 @@
       "_id": "wetter.today.weather",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.state.forecast.0",
         "name": "Weather info",
         "type": "string",
         "read": true,
@@ -258,7 +258,7 @@
       "_id": "wetter.today.type",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.type",
         "name": "Type",
         "type": "string",
         "read": true,
@@ -270,7 +270,7 @@
       "_id": "wetter.today.tMinMin",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "value.temperature.min.forecast.0",
         "name": "Temperatures min min",
         "type": "number",
         "unit": "°C",
@@ -283,7 +283,7 @@
       "_id": "wetter.today.tMinMax",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "value.temperature.min.forecast.0",
         "name": "Temperatures min max",
         "type": "number",
         "unit": "°C",
@@ -296,7 +296,7 @@
       "_id": "wetter.today.tMaxMin",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "value.temperature.max.forecast.0",
         "name": "Temperatures max min",
         "type": "number",
         "unit": "°C",
@@ -309,7 +309,7 @@
       "_id": "wetter.today.tMaxMax",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "value.temperature.max.forecast.0",
         "name": "Temperatures max max",
         "type": "number",
         "unit": "°C",
@@ -345,7 +345,7 @@
       "_id": "wetter.today.schlanders.code",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "text",
         "name": "Symbol code",
         "type": "string",
         "read": true,
@@ -357,7 +357,7 @@
       "_id": "wetter.today.schlanders.description",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.state.forecast.0",
         "name": "Description",
         "type": "string",
         "read": true,
@@ -369,7 +369,7 @@
       "_id": "wetter.today.schlanders.imageUrl",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.icon.forecast.0",
         "name": "Image url",
         "type": "string",
         "read": true,
@@ -381,7 +381,7 @@
       "_id": "wetter.today.schlanders.max",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "value.temperature.max.forecast.0",
         "name": "Max Temperatures",
         "type": "number",
         "unit": "°C",
@@ -394,7 +394,7 @@
       "_id": "wetter.today.schlanders.min",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "value.temperature.min.forecast.0",
         "name": "Min Temperatures",
         "type": "number",
         "unit": "°C",
@@ -415,7 +415,7 @@
       "_id": "wetter.today.meran.code",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "text",
         "name": "Symbol code",
         "type": "string",
         "read": true,
@@ -427,7 +427,7 @@
       "_id": "wetter.today.meran.description",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.state.forecast.0",
         "name": "Description",
         "type": "string",
         "read": true,
@@ -439,7 +439,7 @@
       "_id": "wetter.today.meran.imageUrl",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.icon.forecast.0",
         "name": "Image url",
         "type": "string",
         "read": true,
@@ -451,7 +451,7 @@
       "_id": "wetter.today.meran.max",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "value.temperature.max.forecast.0",
         "name": "Max Temperatures",
         "type": "number",
         "unit": "°C",
@@ -464,7 +464,7 @@
       "_id": "wetter.today.meran.min",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "value.temperature.min.forecast.0",
         "name": "Min Temperatures",
         "type": "number",
         "unit": "°C",
@@ -485,7 +485,7 @@
       "_id": "wetter.today.bozen.code",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "text",
         "name": "Symbol code",
         "type": "string",
         "read": true,
@@ -497,7 +497,7 @@
       "_id": "wetter.today.bozen.description",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.state.forecast.0",
         "name": "Description",
         "type": "string",
         "read": true,
@@ -509,7 +509,7 @@
       "_id": "wetter.today.bozen.imageUrl",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.icon.forecast.0",
         "name": "Image url",
         "type": "string",
         "read": true,
@@ -521,7 +521,7 @@
       "_id": "wetter.today.bozen.max",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "value.temperature.max.forecast.0",
         "name": "Max Temperatures",
         "type": "number",
         "unit": "°C",
@@ -534,7 +534,7 @@
       "_id": "wetter.today.bozen.min",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "value.temperature.min.forecast.0",
         "name": "Min Temperatures",
         "type": "number",
         "unit": "°C",
@@ -555,7 +555,7 @@
       "_id": "wetter.today.sterzing.code",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "text",
         "name": "Symbol code",
         "type": "string",
         "read": true,
@@ -567,7 +567,7 @@
       "_id": "wetter.today.sterzing.description",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.state.forecast.0",
         "name": "Description",
         "type": "string",
         "read": true,
@@ -579,7 +579,7 @@
       "_id": "wetter.today.sterzing.imageUrl",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.icon.forecast.0",
         "name": "Image url",
         "type": "string",
         "read": true,
@@ -591,7 +591,7 @@
       "_id": "wetter.today.sterzing.max",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "value.temperature.max.forecast.0",
         "name": "Max Temperatures",
         "type": "number",
         "unit": "°C",
@@ -604,7 +604,7 @@
       "_id": "wetter.today.sterzing.min",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "value.temperature.min.forecast.0",
         "name": "Min Temperatures",
         "type": "number",
         "unit": "°C",
@@ -625,7 +625,7 @@
       "_id": "wetter.today.brixen.code",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "text",
         "name": "Symbol code",
         "type": "string",
         "read": true,
@@ -637,7 +637,7 @@
       "_id": "wetter.today.brixen.description",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.state.forecast.0",
         "name": "Description",
         "type": "string",
         "read": true,
@@ -649,7 +649,7 @@
       "_id": "wetter.today.brixen.imageUrl",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.icon.forecast.0",
         "name": "Image url",
         "type": "string",
         "read": true,
@@ -661,7 +661,7 @@
       "_id": "wetter.today.brixen.max",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "value.temperature.max.forecast.0",
         "name": "Max Temperatures",
         "type": "number",
         "unit": "°C",
@@ -674,7 +674,7 @@
       "_id": "wetter.today.brixen.min",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "value.temperature.min.forecast.0",
         "name": "Min Temperatures",
         "type": "number",
         "unit": "°C",
@@ -695,7 +695,7 @@
       "_id": "wetter.today.bruneck.code",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "text",
         "name": "Symbol code",
         "type": "string",
         "read": true,
@@ -707,7 +707,7 @@
       "_id": "wetter.today.bruneck.description",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.state.forecast.0",
         "name": "Description",
         "type": "string",
         "read": true,
@@ -719,7 +719,7 @@
       "_id": "wetter.today.bruneck.imageUrl",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "weather.icon.forecast.0",
         "name": "Image url",
         "type": "string",
         "read": true,
@@ -731,7 +731,7 @@
       "_id": "wetter.today.bruneck.max",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "value.temperature.max.forecast.0",
         "name": "Max Temperatures",
         "type": "number",
         "unit": "°C",
@@ -744,7 +744,7 @@
       "_id": "wetter.today.bruneck.min",
       "type": "state",
       "common": {
-        "role": "value",
+        "role": "value.temperature.min.forecast.0",
         "name": "Min Temperatures",
         "type": "number",
         "unit": "°C",

@@ -37,7 +37,7 @@
     "test": "node node_modules/mocha/bin/mocha --exit"
   },
   "bugs": {
-    "url": "https://github.com/ioBroker/ioBroker.template/issues"
+    "url": "https://github.com/lollos78/iobroker.wettersuedtirol/issues"
   },
   "readmeFilename": "README.md"
 }

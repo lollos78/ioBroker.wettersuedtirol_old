@@ -126,10 +126,10 @@ function refreshState()
             adapter.setState('wetter.today.bruneck.max', { val: content.today.stationData[5].max, ack: true });
             adapter.setState('wetter.today.bruneck.min', { val: content.today.stationData[5].min, ack: true });
             if (content.tomorrow != null) {
-                adapter.setObject('wetter.today', {
+                adapter.setObject('wetter.tomorrow', {
                     type: 'channel',
                         common: {
-                        name: 'Weather Today'
+                        name: 'Weather Tomorrow'
                     },
                     native: { }
                 });
@@ -137,7 +137,7 @@ function refreshState()
                 adapter.setObject('wetter.tomorrow.conditions', {
                     type: 'state',
                     common: {
-                            role: 'value',
+                            role: 'text',
                             name: 'Conditions',
                             type: 'string',
                             read: true,
@@ -145,6 +145,7 @@ function refreshState()
                     },
                     native: {}
                 });
+                // .... To DO
                 adapter.setState('wetter.tomorrow.conditions', { val: content.tomorrow.conditions, ack: true });
             }
         },
