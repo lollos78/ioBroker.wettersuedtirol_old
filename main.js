@@ -144,7 +144,7 @@ function refreshState()
             //    // .... To DO
             //    adapter.setState('wetter.tomorrow.conditions', { val: content.tomorrow.conditions, ack: true });
             //}
-            adapter.log.info =  ('Test:' + JSON.stringify(adapter.objects()));
+            
         },
         'GET',
         null
