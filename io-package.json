@@ -198,7 +198,7 @@
       "_id": "wetter.today.conditions",
       "type": "state",
       "common": {
-        "role": "text",
+        "role": "weather.state",
         "name": "Conditions",
         "type": "string",
         "read": true,
@@ -261,58 +261,6 @@
         "role": "weather.type",
         "name": "Type",
         "type": "string",
-        "read": true,
-        "write": false
-      },
-      "native": {}
-    },
-    {
-      "_id": "wetter.today.tMinMin",
-      "type": "state",
-      "common": {
-        "role": "value.temperature.min.forecast.0",
-        "name": "Temperatures min min",
-        "type": "number",
-        "unit": "°C",
-        "read": true,
-        "write": false
-      },
-      "native": {}
-    },
-    {
-      "_id": "wetter.today.tMinMax",
-      "type": "state",
-      "common": {
-        "role": "value.temperature.min.forecast.0",
-        "name": "Temperatures min max",
-        "type": "number",
-        "unit": "°C",
-        "read": true,
-        "write": false
-      },
-      "native": {}
-    },
-    {
-      "_id": "wetter.today.tMaxMin",
-      "type": "state",
-      "common": {
-        "role": "value.temperature.max.forecast.0",
-        "name": "Temperatures max min",
-        "type": "number",
-        "unit": "°C",
-        "read": true,
-        "write": false
-      },
-      "native": {}
-    },
-    {
-      "_id": "wetter.today.tMaxMax",
-      "type": "state",
-      "common": {
-        "role": "value.temperature.max.forecast.0",
-        "name": "Temperatures max max",
-        "type": "number",
-        "unit": "°C",
         "read": true,
         "write": false
       },

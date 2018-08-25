@@ -84,10 +84,6 @@ function refreshState()
             adapter.setState('wetter.today.weather', { val: content.today.weather, ack: true });
             adapter.setState('wetter.today.bulletinStatus', { val: content.today.bulletinStatus, ack: true });
             adapter.setState('wetter.today.type', { val: content.today.type, ack: true });
-            adapter.setState('wetter.today.tMinMin', { val: content.today.tMinMin, ack: true });
-            adapter.setState('wetter.today.tMinMax', { val: content.today.tMinMax, ack: true });
-            adapter.setState('wetter.today.tMaxMin', { val: content.today.tMaxMin, ack: true });
-            adapter.setState('wetter.today.tMaxMax', { val: content.today.tMaxMax, ack: true });
             adapter.setState('wetter.today.reliability', { val: content.today.reliability, ack: true });
 
             adapter.setState('wetter.today.schlanders.code', { val: content.today.stationData[0].symbol.code, ack: true });
