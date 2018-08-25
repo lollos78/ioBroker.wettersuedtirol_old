@@ -47,8 +47,8 @@
       "pt": "docs/pt/admin.md"
     },
     "platform": "Javascript/Node.js",
-    "mode": "schedule",
-    "schedule": "5 0-3,30-33 7-11 * * *",
+    "mode": "daemon", //"schedule",
+    //"schedule": "5 0-3,30-33 7-11 * * *",
 
     "icon": "WetterSuedtirol.png",
     "materialize": true,
