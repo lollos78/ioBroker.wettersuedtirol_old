@@ -70,58 +70,58 @@ function refreshState()
         function (content) {
             adapter.setState('info.connection', true, true);
 
-            adapter.setState('wetter.id', { val: content.id, ack: true });
-            adapter.setState('wetter.date', { val: content.date, ack: true });
-            adapter.setState('wetter.hour', { val: content.hour, ack: true }); 
-            adapter.setState('wetter.evolution', { val: content.evolution, ack: true });
-            adapter.setState('wetter.evolutionTitle', { val: content.evolutionTitle, ack: true });
+            //adapter.setState('wetter.id', { val: content.id, ack: true });
+            //adapter.setState('wetter.date', { val: content.date, ack: true });
+            //adapter.setState('wetter.hour', { val: content.hour, ack: true }); 
+            //adapter.setState('wetter.evolution', { val: content.evolution, ack: true });
+            //adapter.setState('wetter.evolutionTitle', { val: content.evolutionTitle, ack: true });
 
-            adapter.setState('wetter.today.date', { val: content.today.date, ack: true });
-            adapter.setState('wetter.today.hour', { val: content.today.hour, ack: true });
-            adapter.setState('wetter.today.title', { val: content.today.title, ack: true });
-            adapter.setState('wetter.today.conditions', { val: content.today.conditions, ack: true });
-            adapter.setState('wetter.today.temperatures', { val: content.today.temperatures, ack: true });
-            adapter.setState('wetter.today.imageUrl', { val: content.today.imageUrl, ack: true });
-            adapter.setState('wetter.today.weather', { val: content.today.weather, ack: true });
-            adapter.setState('wetter.today.bulletinStatus', { val: content.today.bulletinStatus, ack: true });
-            adapter.setState('wetter.today.type', { val: content.today.type, ack: true });
-            adapter.setState('wetter.today.reliability', { val: content.today.reliability, ack: true });
+            //adapter.setState('wetter.today.date', { val: content.today.date, ack: true });
+            //adapter.setState('wetter.today.hour', { val: content.today.hour, ack: true });
+            //adapter.setState('wetter.today.title', { val: content.today.title, ack: true });
+            //adapter.setState('wetter.today.conditions', { val: content.today.conditions, ack: true });
+            //adapter.setState('wetter.today.temperatures', { val: content.today.temperatures, ack: true });
+            //adapter.setState('wetter.today.imageUrl', { val: content.today.imageUrl, ack: true });
+            //adapter.setState('wetter.today.weather', { val: content.today.weather, ack: true });
+            //adapter.setState('wetter.today.bulletinStatus', { val: content.today.bulletinStatus, ack: true });
+            //adapter.setState('wetter.today.type', { val: content.today.type, ack: true });
+            //adapter.setState('wetter.today.reliability', { val: content.today.reliability, ack: true });
 
-            adapter.setState('wetter.today.schlanders.code', { val: content.today.stationData[0].symbol.code, ack: true });
-            adapter.setState('wetter.today.schlanders.description', { val: content.today.stationData[0].symbol.description, ack: true });
-            adapter.setState('wetter.today.schlanders.imageUrl', { val: content.today.stationData[0].symbol.imageUrl, ack: true });
-            adapter.setState('wetter.today.schlanders.max', { val: content.today.stationData[0].max, ack: true });
-            adapter.setState('wetter.today.schlanders.min', { val: content.today.stationData[0].min, ack: true });
+            //adapter.setState('wetter.today.schlanders.code', { val: content.today.stationData[0].symbol.code, ack: true });
+            //adapter.setState('wetter.today.schlanders.description', { val: content.today.stationData[0].symbol.description, ack: true });
+            //adapter.setState('wetter.today.schlanders.imageUrl', { val: content.today.stationData[0].symbol.imageUrl, ack: true });
+            //adapter.setState('wetter.today.schlanders.max', { val: content.today.stationData[0].max, ack: true });
+            //adapter.setState('wetter.today.schlanders.min', { val: content.today.stationData[0].min, ack: true });
 
-            adapter.setState('wetter.today.meran.code', { val: content.today.stationData[1].symbol.code, ack: true });
-            adapter.setState('wetter.today.meran.description', { val: content.today.stationData[1].symbol.description, ack: true });
-            adapter.setState('wetter.today.meran.imageUrl', { val: content.today.stationData[1].symbol.imageUrl, ack: true });
-            adapter.setState('wetter.today.meran.max', { val: content.today.stationData[1].max, ack: true });
-            adapter.setState('wetter.today.meran.min', { val: content.today.stationData[1].min, ack: true });
+            //adapter.setState('wetter.today.meran.code', { val: content.today.stationData[1].symbol.code, ack: true });
+            //adapter.setState('wetter.today.meran.description', { val: content.today.stationData[1].symbol.description, ack: true });
+            //adapter.setState('wetter.today.meran.imageUrl', { val: content.today.stationData[1].symbol.imageUrl, ack: true });
+            //adapter.setState('wetter.today.meran.max', { val: content.today.stationData[1].max, ack: true });
+            //adapter.setState('wetter.today.meran.min', { val: content.today.stationData[1].min, ack: true });
 
-            adapter.setState('wetter.today.bozen.code', { val: content.today.stationData[2].symbol.code, ack: true });
-            adapter.setState('wetter.today.bozen.description', { val: content.today.stationData[2].symbol.description, ack: true });
-            adapter.setState('wetter.today.bozen.imageUrl', { val: content.today.stationData[2].symbol.imageUrl, ack: true });
-            adapter.setState('wetter.today.bozen.max', { val: content.today.stationData[2].max, ack: true });
-            adapter.setState('wetter.today.bozen.min', { val: content.today.stationData[2].min, ack: true });
+            //adapter.setState('wetter.today.bozen.code', { val: content.today.stationData[2].symbol.code, ack: true });
+            //adapter.setState('wetter.today.bozen.description', { val: content.today.stationData[2].symbol.description, ack: true });
+            //adapter.setState('wetter.today.bozen.imageUrl', { val: content.today.stationData[2].symbol.imageUrl, ack: true });
+            //adapter.setState('wetter.today.bozen.max', { val: content.today.stationData[2].max, ack: true });
+            //adapter.setState('wetter.today.bozen.min', { val: content.today.stationData[2].min, ack: true });
 
-            adapter.setState('wetter.today.sterzing.code', { val: content.today.stationData[3].symbol.code, ack: true });
-            adapter.setState('wetter.today.sterzing.description', { val: content.today.stationData[3].symbol.description, ack: true });
-            adapter.setState('wetter.today.sterzing.imageUrl', { val: content.today.stationData[3].symbol.imageUrl, ack: true });
-            adapter.setState('wetter.today.sterzing.max', { val: content.today.stationData[3].max, ack: true });
-            adapter.setState('wetter.today.sterzing.min', { val: content.today.stationData[3].min, ack: true });
+            //adapter.setState('wetter.today.sterzing.code', { val: content.today.stationData[3].symbol.code, ack: true });
+            //adapter.setState('wetter.today.sterzing.description', { val: content.today.stationData[3].symbol.description, ack: true });
+            //adapter.setState('wetter.today.sterzing.imageUrl', { val: content.today.stationData[3].symbol.imageUrl, ack: true });
+            //adapter.setState('wetter.today.sterzing.max', { val: content.today.stationData[3].max, ack: true });
+            //adapter.setState('wetter.today.sterzing.min', { val: content.today.stationData[3].min, ack: true });
 
-            adapter.setState('wetter.today.brixen.code', { val: content.today.stationData[4].symbol.code, ack: true });
-            adapter.setState('wetter.today.brixen.description', { val: content.today.stationData[4].symbol.description, ack: true });
-            adapter.setState('wetter.today.brixen.imageUrl', { val: content.today.stationData[4].symbol.imageUrl, ack: true });
-            adapter.setState('wetter.today.brixen.max', { val: content.today.stationData[4].max, ack: true });
-            adapter.setState('wetter.today.brixen.min', { val: content.today.stationData[4].min, ack: true });
+            //adapter.setState('wetter.today.brixen.code', { val: content.today.stationData[4].symbol.code, ack: true });
+            //adapter.setState('wetter.today.brixen.description', { val: content.today.stationData[4].symbol.description, ack: true });
+            //adapter.setState('wetter.today.brixen.imageUrl', { val: content.today.stationData[4].symbol.imageUrl, ack: true });
+            //adapter.setState('wetter.today.brixen.max', { val: content.today.stationData[4].max, ack: true });
+            //adapter.setState('wetter.today.brixen.min', { val: content.today.stationData[4].min, ack: true });
 
-            adapter.setState('wetter.today.bruneck.code', { val: content.today.stationData[5].symbol.code, ack: true });
-            adapter.setState('wetter.today.bruneck.description', { val: content.today.stationData[5].symbol.description, ack: true });
-            adapter.setState('wetter.today.bruneck.imageUrl', { val: content.today.stationData[5].symbol.imageUrl, ack: true });
-            adapter.setState('wetter.today.bruneck.max', { val: content.today.stationData[5].max, ack: true });
-            adapter.setState('wetter.today.bruneck.min', { val: content.today.stationData[5].min, ack: true });
+            //adapter.setState('wetter.today.bruneck.code', { val: content.today.stationData[5].symbol.code, ack: true });
+            //adapter.setState('wetter.today.bruneck.description', { val: content.today.stationData[5].symbol.description, ack: true });
+            //adapter.setState('wetter.today.bruneck.imageUrl', { val: content.today.stationData[5].symbol.imageUrl, ack: true });
+            //adapter.setState('wetter.today.bruneck.max', { val: content.today.stationData[5].max, ack: true });
+            //adapter.setState('wetter.today.bruneck.min', { val: content.today.stationData[5].min, ack: true });
             
         },
         'GET',
